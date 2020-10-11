@@ -1,0 +1,14 @@
+.footer{
+    position: fixed;
+    bottom: 0px;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+p{
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: medium;
+}

@@ -1,0 +1,57 @@
+<div class="content-root">
+    <app-navbar></app-navbar>
+    <app-page-indicator></app-page-indicator>
+    <div class="content">
+        <h1>Isi Data Diri</h1>
+        <div class="left">
+            <form [formGroup]="pinjamanForm">
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Nama Nasabah</mat-label>
+                    <input type="text" matInput placeholder="Nama Nasabah" formControlName="nama">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Alamat</mat-label>
+                    <input type="text" matInput placeholder="Alamat" formControlName="alamat">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Provinsi</mat-label>
+                        <mat-select formControlName="provinsi">
+                            <mat-option value={{p.provinsi}} *ngFor="let p of msData">{{  p.provinsi }}</mat-option>
+                        </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Kota</mat-label>
+                        <mat-select formControlName="kota">
+                            <mat-option value={{k}} *ngFor="let k of selectedKota">{{ k }}</mat-option>
+                        </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Phone</mat-label>
+                    <input type="tel" matInput placeholder="Phone" formControlName="no_tlp">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Jumlah Pinjaman</mat-label>
+                    <input matInput matInputCommified type="text" class="text-right-align" formControlName="pinjaman">
+                    <span matPrefix>Rp&nbsp;</span>
+                    <span matSuffix>.00</span>
+                </mat-form-field>
+                
+
+            </form>
+
+            <button class="mat-button" mat-button color="primary" (click)="onSave()" (keydown.enter)="onSave()">Save</button>
+
+            <p>{{test}}</p>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

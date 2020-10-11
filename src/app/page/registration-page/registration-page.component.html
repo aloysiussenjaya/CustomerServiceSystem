@@ -1,0 +1,200 @@
+<div class="content-root">
+    <app-navbar></app-navbar>
+    <app-page-indicator></app-page-indicator>
+    <div class="content">
+        <div class="content-top">
+            <form [formGroup]="registrationForm">
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Jenis Identitas</mat-label>
+                        <mat-select formControlName="jenis_identitas">
+                            <mat-option value="option">Jenis Identitas #1</mat-option>
+                            <mat-option value="option">Jenis Identitas #2</mat-option>
+                        </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="md-element">
+                    <mat-label>No Identitas</mat-label>
+                    <input type="text" matInput placeholder="No Identitas" formControlName="no_identitas">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="sm-element">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" disabled>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker disabled="false"></mat-datepicker>
+                  </mat-form-field>
+                  
+                <mat-divider class="divider"></mat-divider>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Nama Nasabah</mat-label>
+                    <input type="text" matInput placeholder="Nama Nasabah" formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Referensi</mat-label>
+                    <input type="text" matInput placeholder="Referensi" formControlName="name">
+                </mat-form-field>
+                <mat-divider class="divider"></mat-divider>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Alias</mat-label>
+                    <input type="text" matInput placeholder="Alias" formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="sm-element">
+                    <mat-label>Rekening</mat-label>
+                    <input type="text" matInput placeholder="Rekening" formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="md-element">
+                    <mat-label></mat-label>
+                    <input type="text" matInput placeholder="" formControlName="name">
+                </mat-form-field>
+
+                <mat-divider class="divider"></mat-divider>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Nama Lengkap SLIK</mat-label>
+                    <input type="text" matInput placeholder="Nama Lengkap SLIK" formControlName="name">
+                </mat-form-field>
+
+                <mat-radio-group formControlName="name" class="lg-element">
+                    <mat-radio-button value="Penduduk">Penduduk</mat-radio-button>
+                    <mat-radio-button value="Non Penduduk">Non Penduduk</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-divider class="divider"></mat-divider>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Nama Ibu</mat-label>
+                    <input type="text" matInput placeholder="Nama Ibu" formControlName="name">
+                </mat-form-field>
+
+                <mat-radio-group formControlName="name" class="lg-element">
+                    <mat-radio-button value="Kena Pajak">Kena Pajak</mat-radio-button>
+                    <mat-radio-button value="Bebas Pajak">Bebas Pajak</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-divider class="divider"></mat-divider>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>NPWP</mat-label>
+                    <input type="text" matInput placeholder="NPWP" formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Account Officer</mat-label>
+                    <input type="text" matInput placeholder="Account Officer" formControlName="name">
+                </mat-form-field>
+
+                <mat-divider class="divider"></mat-divider>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Golongan Pemilik</mat-label>
+                    <input type="text" matInput placeholder="Golongan Pemilik" formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Terkait dg Bank</mat-label>
+                    <input type="text" matInput placeholder="Terkait dg Bank" formControlName="name">
+                </mat-form-field>
+
+                <mat-divider class="divider"></mat-divider>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Status Nasabah</mat-label>
+                        <mat-select>
+                            <mat-option value="option">Status Nasabah #1</mat-option>
+                            <mat-option value="option">Status Nasabah #2</mat-option>
+                        </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="lg-element">
+                    <mat-label>Bentuk Hukum</mat-label>
+                    <input type="text" matInput placeholder="Bentuk Hukum" formControlName="name">
+                </mat-form-field>
+
+            </form>
+
+        </div>
+        <div class="content-bottom">
+            <mat-tab-group mat-align-tabs="start">
+                <mat-tab label="Perorangan">
+                    <div class="tab-content">
+                        <section class="lg-bot-element">
+                            <mat-checkbox [(ngModel)]="karyawan_bank">Karyawan Bank</mat-checkbox>
+                            <mat-checkbox [(ngModel)]="keluarga_karyawan">Keluarga Karyawan</mat-checkbox>
+                            <mat-radio-group formControlName="name" class="radio-button-bot-group">
+                                <mat-label>Jenis Kelamin </mat-label>
+                                <mat-radio-button value="Laki-Laki">Laki-Laki</mat-radio-button>
+                                <mat-radio-button value="Perempuan">Perempuan</mat-radio-button>
+                            </mat-radio-group>
+                        </section>
+
+                        <form [formGroup]="registrationForm">
+                            <mat-form-field appearance="fill" class="sm-bot-element">
+                                <mat-label>Tempat</mat-label>
+                                <input type="text" matInput placeholder="No Identitas" formControlName="name">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="sm-bot-element bot-3-item-margin">
+                                <mat-label>Tanggal Lahir</mat-label>
+                                <input matInput [matDatepicker]="picker2">
+                                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                <mat-datepicker #picker2></mat-datepicker>
+                              </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="sm-bot-element bot-3-item-margin">
+                                <mat-label>Agama</mat-label>
+                                <mat-select>
+                                    <mat-option value="Agama #1">Agama #1</mat-option>
+                                    <mat-option value="Agama #2">Agama #2</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="md-bot-element">
+                                <mat-label>Status Kawin</mat-label>
+                                <mat-select>
+                                    <mat-option value="option">Status Kawin #1</mat-option>
+                                    <mat-option value="option">Status Kawin #2</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="md-bot-element bot-2-item-margin">
+                                <mat-label>Tempat</mat-label>
+                                <input type="text" matInput placeholder="No Identitas" formControlName="name">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="md-bot-element">
+                                <mat-label>Pekerjaan</mat-label>
+                                <input type="text" matInput placeholder="Pekerjaan" formControlName="name">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="md-bot-element bot-2-item-margin">
+                                <mat-label>Status/Gelar</mat-label>
+                                <input type="text" matInput placeholder="Status/Gelar" formControlName="name">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="md-bot-element">
+                                <mat-label>Keterangan</mat-label>
+                                <input type="text" matInput placeholder="Keterangan" formControlName="name">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill" class="md-bot-element bot-2-item-margin">
+                                <mat-label>Tempat Debitur Bekerja</mat-label>
+                                <input type="text" matInput placeholder="Tempat Debitur Bekerja" formControlName="name">
+                            </mat-form-field>
+
+                        </form>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Alamat">Alamat</mat-tab>
+                <mat-tab label="Photo/Tanda Tangan">"Photo/Tanda Tangan"</mat-tab>
+                <mat-tab label="KYC">KYC Content</mat-tab>
+              </mat-tab-group>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

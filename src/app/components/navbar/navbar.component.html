@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="navbar">
+    <a mat-button routerLink='/home'>Home</a>
+    <a mat-button [matMenuTriggerFor]="customerMenu">Customer Service <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon></a>
+    <mat-menu #customerMenu="matMenu">
+        <a mat-button routerLink='/registration'>Registration</a>
+        <br>
+        <a mat-button>Appointment</a>
+    </mat-menu>
+    <a mat-button>TABUNGAN / SIMPANAN <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon></a>
+    <a mat-button>Components <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon></a>
+    <a mat-button>Applications <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon></a>
+    <a mat-button>Customs <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon></a>
+    <a mat-button routerLink="/pinjaman">PINJAMAN</a>
+</mat-toolbar>

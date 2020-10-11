@@ -1,0 +1,29 @@
+<mat-card class="login-card">
+    <div class="center-content">
+        <!-- <mat-card-header>
+            <mat-card-title>Sign In</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header> -->
+        <mat-card-content>
+            <div class="title">
+                <h1>SignIn</h1>
+                <p>Masukkan User dan Password</p>
+            </div>
+
+            <mat-divider [inset]="true"></mat-divider>
+            <form [formGroup]="loginForm" class="login-form">
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput placeholder="Username" formControlName="username">
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput placeholder="Password" formControlName="password">
+                </mat-form-field>  
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="mat-button" mat-button color="primary" (click)="login()" (keydown.enter)="login()">Login</button>
+        </mat-card-actions>
+    </div>
+</mat-card>

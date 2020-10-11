@@ -1,0 +1,25 @@
+.content-root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    
+}
+
+.content-root .banner {
+    width: 100%;
+    background-image: url("https://images.newindianexpress.com/uploads/user/imagelibrary/2019/3/7/w900X450/Take_in_the_Scenery.jpg");
+    background-size: cover;
+
+}
+
+.content-root .login-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

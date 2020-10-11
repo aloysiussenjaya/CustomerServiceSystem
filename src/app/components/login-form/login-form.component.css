@@ -1,0 +1,51 @@
+.login-card {
+    max-width: 400px;
+  }
+
+.center-content{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.title{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+p{
+    margin-bottom: 40px;
+    color: grey;
+}
+
+.full-width{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.login-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.mat-button{
+    margin-top: 30px;
+    color: white;
+    background-color: #3f51b5;
+    width: 30%;
+    height: 40px;
+}
+
+mat-form-field.mat-form-field {
+    font-size: 16px;
+  }
+
+/* Remove Input Underlines */
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
